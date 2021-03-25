@@ -1,0 +1,345 @@
+*{
+    /* Para que todo se pegue a los lados */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*Para que el scrool se mueva lento en conctatame*/
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: 'Raleway', sans-serif;
+}
+
+.hero{
+    /*Gradiente*/
+    background-image: linear-gradient(-225deg, rgba(34, 226, 255, 0.699) 0%, rgba(29, 143, 225, 0.705) 48%, #625EB1 100%), url('/img/header.jpg');
+    width: 100%;
+    height: 650px;
+    background-repeat: no-repeat; /*para que sea unica imagen*/
+    background-size: cover; /*Escala la imagen al mayor tamaño posible sin estirarla*/
+    background-position: center; /*centra la imagen*/
+    background-attachment: fixed; /*la imagen de fondo estará fija en la pantalla y no se moverá con el bloque contenedor.--TIPO EFECTO PARALLAX*/
+    position: relative;
+    overflow: hidden; /*para que nada salga */
+}
+
+.textos-hero{
+    height: 500px;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.textos-hero h1{
+    font-size: 60px;
+}
+
+.textos-hero p{
+    font-size: 25px;
+    margin-bottom: 20px; /*para que no este tan pegado al elementp a*/
+}
+
+.textos-hero a{
+    display: inline-block; /*para quie tenga propiedades de bloque y de linea*/
+    text-decoration: none;
+    padding: 12px 15px; /*see hace mas grande*/
+    background: #a18cd1;
+    border-radius: 8px;
+    color: #fff;
+}
+
+/*para fijar el efecto ola y que nunca cambie de posicion*/
+.svg-hero{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+/* Estilos generales*/
+
+.contenedor,
+.wave-contenedor{
+    width: 90%;
+    max-width: 1000px;
+    overflow: hidden;
+    margin: auto;
+    padding: 0 0 80px 0;
+}
+
+.contenedor{
+    padding: 80px 0;
+}
+
+.titulo{
+    font-weight: 300;
+    font-size: 35px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.titulo.left{
+    text-align: left;
+}
+
+/* Seccion */
+.website{
+    display: flex; /*para que se pongan uno al lado del otro*/
+    justify-content: space-between; /*para que tengan espacio entre ellos*/
+}
+
+.website img{
+    width: 48%;
+}
+
+.website .contenedor-textos-main{
+    width: 40%;
+}
+
+.parrafo{
+    text-align: justify;
+    margin-bottom: 20px; /*para que tenga espacio entre el totulo y el elemento a*/
+}
+
+.cta{
+    display: inline-block;
+    text-decoration: none;
+    background-image: linear-gradient(-225deg, #22E1FF 0%, #1D8FE1 48%, #625EB1 100%);
+    padding: 12px 15px;
+    border-radius: 8px;
+    color: #fff;
+}
+
+/* Info */
+
+.info{
+    background-color: #1d8fe1;
+    color: #fff;
+}
+
+/* cards */
+.content-cards{
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly; /*para que haya espacio entre cada elemento*/
+    flex-wrap:wrap ;
+}
+
+.card{
+    width: 30%; /*para que quepan las 3 cards*/
+    text-align: center;
+    height: 300px;
+    box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.5);
+    transform: scale(1);
+    transition: transform 0.6s;
+}
+
+.card:hover{
+    box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.5);
+    transform: scale(1.03);
+    cursor: pointer;
+}
+
+.card i{
+    margin: 30px 0 20px 0;
+    color: #1D8FE1;
+    font-size: 50px;
+}
+
+.card p{
+    font-weight: 300;
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+/*  Galeria  */
+.galeria{
+    background: #f2f2f2;
+}
+
+.galeria-cont{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    overflow: hidden; /*para que nada salga del contenedor de la galeria*/
+}
+
+.galeria-cont>img{
+    width: 30%;
+    object-fit: cover; /*El contenido reemplazado se dimensiona para mantener su relación de aspecto mientras llena el cuadro de contenido completo del elemento. Si la relación de aspecto del objeto no coincide con la relación de aspecto de su caja, entonces el objeto se recortará para que se ajuste.*/
+    margin-bottom: 20px;
+    display: block;
+    box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    overflow: hidden;
+}
+
+/* Info 2 */
+
+.last-section{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-bottom: 40px;
+}
+
+.last-section img{
+    width: 48%;
+}
+
+.last-section .contenedor-textos-main{
+    width: 40%;
+}
+
+/*  Footer  */
+
+footer{
+    background: #08f;
+    color: #fff;
+}
+
+.form{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.input{
+    background: transparent;
+    border: 0;
+    color: #fff;
+    outline: none;
+    border: 1px solid #fff;
+    padding: 20px 10px;
+}
+
+.input::placeholder{
+    color: #fff;
+    font-family: 'raleway', 'san serif';
+}
+
+input[type='text'],
+input[type='email']{
+    display: inline-block;
+    width: 49%;
+    margin-bottom: 30px;
+}
+
+.form textarea{
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+input[type='submit']{
+    width: 120px;
+    text-align: center;
+    padding: 14px 0;
+}
+
+.input[type='submit']:hover{
+    cursor: pointer;
+    background: #fff;
+    color: #1D8FE1;
+}
+
+
+/*  Responsive   a 400px*/
+
+@media screen and (max-width:800px) {
+    .textos-hero h1{
+        text-align: center;
+        font-size: 40px;
+    }
+
+    /*  Estilos generales  */
+    .titulo{
+        font-size: 35px;
+    }
+
+    .titulo.left{
+        text-align: center;
+    }
+
+    .info p{
+        text-align: center;
+    }
+
+    /*  Section  */
+    .website{
+        flex-direction: column-reverse;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .website img{
+        width: 100%;
+    }
+
+    .website .contenedor-textos-main{
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    /*  Cards  */
+    .card{
+        width: 90%;
+        margin-bottom: 20px;
+    }
+
+    .card p{
+        font-size: 15px;
+        margin-bottom: 40px;
+    }
+
+    .card h3{
+        padding-bottom: 20px;
+    }
+
+    /*  Galeria  */
+
+    /* sugerido en el video 
+    .galeria-cont>img{
+        width: 48%;
+    } */
+
+    .galeria img{
+        width: 40%;
+    }
+
+    /*  Info 2  */
+    .last-section img{
+        width: 98%;
+    }
+
+    .last-section .contenedor-textos-main{
+        width: 98%;
+        margin-bottom: 20px;
+    }
+
+    /*  Responsive 400px  */
+
+    @media screen  and (max-width:400px){
+        .titulo,
+        .textos-hero h1{
+            font-size: 30px;
+        }
+
+        .textos-hero p{
+            font-size: 20px;
+            text-align: center;
+        }
+
+        /*  Galeria  */
+        .galeria-cont>img{
+            width: 95%;
+        }
+    }
+
+}
